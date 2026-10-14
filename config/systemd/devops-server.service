@@ -1,0 +1,19 @@
+[Unit]
+Description=DevOps Server Website
+After=network.target
+
+[Service]
+Type=simple
+User=devops
+Group=devops
+WorkingDirectory=/home/devops/devops-server/app
+ExecStart=/usr/bin/python3 -m http.server 8081 --bind 127.0.0.1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target
