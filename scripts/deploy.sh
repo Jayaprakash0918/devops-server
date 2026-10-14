@@ -24,7 +24,7 @@ sudo systemctl restart "$SERVICE"
 
 echo "==> Checking website health"
 
-for attemp in {1..10}; do
+for attempt in {1..10}; do
 if curl -fsS --max-time 3 "$HEALTH_URL" > /dev/null; then
 echo "PASS: Website is responding."
 echo "DEPLOYMENT SUCCESSFUL"
