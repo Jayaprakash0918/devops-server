@@ -4,7 +4,7 @@ set -euo pipefail
 
 PROJECT_DIR="/home/devops/devops-server"
 SERVICE="devops-server.service"
-HEALTH-URL="http://127.0.0.1/"
+HEALTH_URL="http://127.0.0.1/"
 
 cd "$PROJECT_DIR"
 
